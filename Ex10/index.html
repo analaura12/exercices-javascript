@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+<body>
+    <input id="numero1" type="text" placeholder="Digite um número">
+    <input id="numero2" type="number" placeholder="Digite um número">
+    <button type="number" value="Somar" id="btn-soma">Somar</button>
+    <input type="text" id="resultado" disabled>
+
+    <script type="text/javascript">
+        document.getElementById("btn-soma").addEventListener('click', function(){
+            numero1 = document.getElementById("numero1").value;
+            numero2 = document.getElementById("numero2").value;
+            resultado = document.getElementById("resultado");
+
+            if(numero1 !== '' && numero2 !== ''){
+                soma = parseInt(numero1)+parseInt(numero2);
+                resultado.value = soma;
+            }else{
+                alert("Preencha os dois campos!");
+            }
+        });
+    </script>
+</body>
+</html>
