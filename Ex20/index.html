@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 17</title>
+    <title>Exercício 20</title>
 </head>
 <body>
     <input id="numero1" type="text" placeholder="Digite um número">
     <input id="numero2" type="number" placeholder="Digite um número">
-    <button type="button" value="Somar" id="btn-soma">Somar</button>
+    <button type="button" value="Somar" id="btn-multiplicar">multiplicar</button>
     <input type="text" id="resultado" disabled>
 
     <script type="text/javascript">
-        function soma(number1, number2) {
+        function multiplicar(number1, number2) {
             if(number1 === '' || number2 === ''){
                 return 0;
             }
-            return parseInt(number1) + parseInt(number2);
+            return parseInt(number1)* parseInt(number2);
         };
 
-        document.getElementById("btn-soma").addEventListener('click', function(){
+        document.getElementById("btn-multiplicar").addEventListener('click', function(){
             number1 = document.getElementById("numero1").value;
             number2 = document.getElementById("numero2").value;
             result = document.getElementById("resultado");
-            result.value = soma(number1, number2);
+            result.value = multiplicar(number1, number2);
         });
     </script>
 </body>
